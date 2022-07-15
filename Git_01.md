@@ -47,37 +47,37 @@
   start .		# 현재 폴더를 엶.
   ```
 
-* `mkdir` : make directory. 새 폴더를 만드는 명령어
+* `mkdir` : *make directory.* 새 폴더를 만드는 명령어
 
   ``` bash
   mkdir folder_name
   mkdir 'folder name'
   ```
 
-* `ls` : list. 현재 폴더의 리스트를 보여주는 명령어
+* `ls` : *list.* 현재 폴더의 리스트를 보여주는 명령어
 
   ```bash
   ls -a		# 숨겨놓은 파일까지 다 보여줌.
   ls -l		# 모든 파일의 정보를 자세히 보여줌.
   ```
 
-* `pwd` : print working directory.  현재 위치를 알려주는 명령어
+* `pwd` : *print working directory.*  현재 위치를 알려주는 명령어
 
-* `cd` : change directory. 폴더를 이동하는 명령어
+* `cd` : *change directory.* 폴더를 이동하는 명령어
 
   ```bash
   cd ..		# 상위 폴더로 이동
   cd test 	# test 폴더로 이동
   ```
 
-* `mv` : move.
+* `mv` : *move.*
 
   ```bash
   mv a.txt b.txt		# a.txt를 b.txt로 rename (a.txt와 b.txt가 같은 폴더內이므로)
   mv a.txt ../test	# a.txt를 상위 폴더의 test 폴더로 이동
   ```
 
-* `rm` : remove. 복구 안 됨.
+* `rm` : *remove.* 복구 안 됨.
 
   ```bash
   rm a.txt
@@ -158,7 +158,13 @@
 * git의 방식을 사용해서 파일을 관리하는 원격 관리 시스템
 
 * `git push` : local PC의 git을 GitHub에 업로드
+
 * `git clone` : **local PC에 git이 아무 것도 없을 때,** GitHub의 git을 local PC에 다운로드
+
+  ```bash
+  git clone https://github.com/your_name/folder_name.git receive_folder
+  ```
+
 * `git pull` : GitHub의 git을 local PC에 다운로드
 
 * `git remote add` : local PC와 GitHub 사이에 다리를 놓는 명령어
