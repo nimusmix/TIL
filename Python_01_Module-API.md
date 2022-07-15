@@ -54,7 +54,7 @@ for chance in range(7000000):
     if member == 6:
         
         print("same")
-				print(chance)
+		print(chance)
 
 # while문으로 풀기
 chance = 0
