@@ -167,6 +167,10 @@
 
 * `git pull` : GitHub의 git을 local PC에 다운로드
 
+  ```bash
+  git pull origin master
+  ```
+
 * `git remote add` : local PC와 GitHub 사이에 다리를 놓는 명령어
 
   ```bash
