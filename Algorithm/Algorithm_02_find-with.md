@@ -1,6 +1,6 @@
 # Algorithm_02_find-with
 
-## ✨ find()
+## ✨ .find()
 
 - 문자열에서 특정 문자열을 찾아 index를 리턴
 - 찾는 문자열이 없을 경우 **-1**을 리턴
@@ -15,7 +15,7 @@ word.find('p', 3)    # -1
 
 
 
-## ✨startswith(), endwith()
+## ✨.startswith(), .endwith()
 
 - 문자열이 특정 문자열로 시작하는지 또는 끝나는지 여부를 리턴
 
@@ -29,6 +29,5 @@ word.startswith('p', '1')    # True
 
 # endswith(끝나는 문자[, 시작 위치[, 끝 위치])
 word.endswith('e')           # True
-word.endswith('l', 1, 4)     # Ture
+word.endswith('l', 1, 4)     # True
 ```
-
