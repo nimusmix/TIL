@@ -8,7 +8,7 @@
 ```python
 # find(찾는 문자[, 시작 위치])
 word = 'apple'
-word.find('p'        # 1
+word.find('p')       # 1
 word.find('p', 2)    # 2
 word.find('p', 3)    # -1
 ```
