@@ -13,7 +13,7 @@ word.find('p', 2)    # 2
 word.find('p', 3)    # -1
 ```
 
-
+<br/>
 
 ## ✨.startswith(), .endwith()
 
