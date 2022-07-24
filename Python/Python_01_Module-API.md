@@ -14,7 +14,7 @@ numbers = range(1, 46)
 lucky = random.sample(numbers, 6)
 ```
 
-
+<br/>
 
 ## ✨ API
 
@@ -34,7 +34,7 @@ url = 'https://api.agify.io/?name=jun'
 print(requests/get(url).json())
 ```
 
-
+<br/>
 
 ## ✨ Lotto
 
