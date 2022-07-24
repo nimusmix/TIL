@@ -1,6 +1,6 @@
 # Algorithm_01_aligned
 
-## ✨ Right Aligned
+## ✨ Right aligned
 
 - `.rjust(n)` : 전체 n 중 오른쪽 정렬
 
@@ -12,7 +12,7 @@ for i in range(a):
     print(('*' * i).rjust(a))
 ```
 
-
+<br/>
 
 ## ✨ Center
 
