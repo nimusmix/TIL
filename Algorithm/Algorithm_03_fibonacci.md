@@ -10,7 +10,7 @@ def fibo(n):
     return fibo(n-2) + fibo(n-1)
 ```
 
-
+<br/>
 
 ## ✨ List update
 
@@ -23,7 +23,7 @@ for i in range(2, n+1):
 print(fibo[n])
 ```
 
-
+<br/>
 
 ## ✨ Variable
 
