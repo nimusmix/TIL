@@ -1,6 +1,6 @@
 # Git_02
 
-## ✨ Enter a commit message (when you merge)
+## ✨ Enter a commit message issue
 
 > Please enter a commit message to explain why this merge is necessary, especially if it merges an updated upstream into a topic branch.
 
@@ -9,3 +9,4 @@
 3. `esc`를 누른다.
 4. `:wq`를 입력한다.
 5. `enter`를 누른다.
+
