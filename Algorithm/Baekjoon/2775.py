@@ -4,23 +4,15 @@ for _ in range(t):
     k = int(input())
     n = int(input())
 
-    t_list = [[0] * 14 for _ in range(15)]
-    p = 0
+    t_list = [[0] * 15 for _ in range(15)]
+    p = 1
 
-    for s in range(15):
-        for t in range(15):
-            
-
-
-
-
-
-
-
-
-'''
-3층 : 1명 5명 15명 35명
-2층 : 1명 4명 10명 20명
-1층 : 1명 3명 6명 10명
-0층 : 1명 2명 3명 4명
-'''
+    for floor in range(15):
+        for room in range(1, 15):
+            if floor == 0:
+                t_list[floor][room] = p
+                p += 1
+            else:
+                t_list[floor][room] = t_list[floor-1][room] + t_list[floor][room-1]
+    
+    print(t_list[k][n])
