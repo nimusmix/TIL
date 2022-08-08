@@ -23,6 +23,6 @@ for i in a_li:
         div *= i
         b_li.remove(i)
 
-mul = div * (a/div) * (b/div)
+mul = div * (a//div) * (b//div)
 
-print(div, int(mul), sep='\n')
+print(div, mul, sep='\n')
