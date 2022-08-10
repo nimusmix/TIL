@@ -52,6 +52,19 @@
 
 3. **선택 정렬**
 
+    - 주어진 자료들 중 가장 작은 값의 원소부터 차례대로 선택하여 위치를 교환하는 방식
+    - 시간 복잡도 : O(n^2)
+
+    ```python
+    def SelectionSort(a, N):
+      for i range(N-1):               # 구간 시작
+        minIdx = i                    # 구간의 맨 앞을 최소값으로 가정
+        for j in range(i+1, N):       # 실제 최소값 인덱스 찾기
+          if a[minIdx] > a[j]:
+            minIdx = j
+        a[i], a[minIdx] = a[minIdx], a[i]
+    ```
+
 4. 퀵 정렬
 
 5. 삽입 정렬
