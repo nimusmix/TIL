@@ -99,7 +99,7 @@ def backtrack(a, k, input):
   c = [0] * MAXCANDIDATES
   
   if k = input:
-    process_solutuin(a, k)         # 답이면 원하는 작업을 한다.
+    process_solution(a, k)         # 답이면 원하는 작업을 한다.
   else:
     k += 1
     ncandidates = construct_candidates(a, k, input, c)
