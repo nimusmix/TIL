@@ -1,11 +1,11 @@
 N = int(input())
 
 for _ in range(N):
-    vps = input()
+    v = input()
     stack = []
     
     try:
-        for i in vps:
+        for i in v:
                 if i == '(': stack.append(i)
                 else: stack.pop()
             
