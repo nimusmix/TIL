@@ -33,7 +33,7 @@ rear == n-1                            # n == 배열의 크기, n-1 == 배열의
 def enQueue(item):
   global rear
   if isFull():
-    print('Queue_Full')                # 디버깅용
+    print('Queue_Full')                  # 디버깅용
   else:
     rear += 1
     Q[rear] = item
@@ -42,7 +42,7 @@ def enQueue(item):
 def deQuque():
   global front
   if isEmpty():
-    print('Queue_Empty')               # 디버깅용
+    print('Queue_Empty')                 # 디버깅용
   else:
     front += 1
     return Q[front]
@@ -58,9 +58,9 @@ def isFull():
 # 검색
 def Qpeek():
   if isEmpty():
-    print('Queue_Empty')               # 디버깅용
+    print('Queue_Empty')                 # 디버깅용
   else:
-    return Q[front+1]                  # 큐의 첫 번째에 있는 원소를 반환
+    return Q[front+1]                    # 큐의 첫 번째에 있는 원소를 반환
 ```
 
 <br/>
@@ -97,7 +97,7 @@ def Qpeek():
 def enQueue(item):
   global rear
   if isFull():
-    print('Queue_Full')                # 디버깅용
+    print('Queue_Full')                  # 디버깅용
   else:
     rear = (rear+1) % leb(cQ)
     cQ[rear] = item
@@ -106,7 +106,7 @@ def enQueue(item):
 def deQueue():
   global front
   if isEmpty():
-    print('Queue_Empty')               # 디버깅용
+    print('Queue_Empty')                 # 디버깅용
   else:
     front = (front + 1) % len(cQ)
     return cQ[front]
@@ -162,13 +162,13 @@ def isFull():
 ```python
 from collections import deque
 
-p = 1                                # 처음 줄 설 사람의 번호
+p = 1                                  # 처음 줄 설 사람의 번호
 q = deque()
-N = 20                               # 초기 마이쮸 개수
-m = 0                                # 나눠준 개수
+N = 20                                 # 초기 마이쮸 개수
+m = 0                                  # 나눠준 개수
 
 while m < N:
-  q.append((p, 1, 0))                # 처음 줄 서는 사람
+  q.append((p, 1, 0))                  # 처음 줄 서는 사람
   v, c, my = q.popleft()
   # print(f'큐에 있는 사람 수: {len(q)+1}, 받아갈 사탕 수: {c}, 나눠준 사탕 수: {m}')
   m += c
@@ -184,7 +184,7 @@ print(f'마지막으로 받은 사람: {v}')
 - 탐색 시작점의 인접한 정점들을 먼저 모두 차례로 방문한 후에,
     방문했던 정점을 시작점으로 하여 다시 인접한 정점들을 차례로 방문하는 방식
 - 인접한 정점들에 대해 탐색을 한 후 차례로 다시 BFS를 진행해야 하므로, **선입선출 구조의 큐를 사용**
-- 출발점이 2개 이상이어도 가능
+- 출발점이 2개 이상이어도 탐색 가능
 - 입력 파라미터 : 그래프 G와 탐색 시작점 v
 - 방법
     1. 초기상태
@@ -198,23 +198,23 @@ print(f'마지막으로 받은 사람: {v}')
     3. queue가 비었을 때 탐색 종료
 
 ```python
-def BFS(G, v):                         # 그래프 G, 탐색 시작점 v
-  visited = [0] * (n+1)                # n = 정점의 개수
-  queue = []                           # 큐 생성
-  queue.append(v)                      # 시작점 v를 큐에 삽입
+def BFS(G, v):                           # 그래프 G, 탐색 시작점 v
+  visited = [0] * (n+1)                  # n = 정점의 개수
+  queue = []                             # 큐 생성
+  queue.append(v)                        # 시작점 v를 큐에 삽입
   
-  while queue:                         # 큐가 비어 있지 않은 경우
-    t = queue.pop(0)                   # 큐의 첫 번째 원소 반환
-    if not visited[t]:                 # 방문되지 않은 곳이라면
-      visited[t] == True               # 방문한 것으로 표시
-      visit(t)                         # 정점 t에서 할 일
-      for i in G[t]:                   # t와 연결된 모든 정점에 대해
-        if not visited[i]:             # 방문되지 않은 곳이라면
-          queue.append(i)              # 큐에 넣기
+  while queue:                           # 큐가 비어 있지 않은 경우
+    t = queue.pop(0)                     # 큐의 첫 번째 원소 반환
+    if not visited[t]:                   # 방문되지 않은 곳이라면
+      visited[t] == True                 # 방문한 것으로 표시
+      visit(t)                           # 정점 t에서 할 일
+      for i in G[t]:                     # t와 연결된 모든 정점에 대해
+        if not visited[i]:               # 방문되지 않은 곳이라면
+          queue.append(i)                # 큐에 넣기
 ```
 
 ```python
-def BFS(G, v, n):                      # 그래프 G, 탐색 시작점 v, 정점의 개수 n
+def BFS(G, v, n):                        # 그래프 G, 탐색 시작점 v, 정점의 개수 n
   visited = [0] * (n+1)
   queue = []
   queue.append(v)
@@ -226,17 +226,96 @@ def BFS(G, v, n):                      # 그래프 G, 탐색 시작점 v, 정점
     for i in G[t]:
       if not visited[i]:
         queue.append(i)
-        visited[i] = visited[t] + 1    # t로부터 1만큼 더해 최단 경로 찾기 용이하게 함.
+        visited[i] = visited[t] + 1      # t로부터 1만큼 더해 최단 경로 찾기 용이하게 함.
+```
+
+```python
+# 출발점이 2개 이상인 BFS 탐색 (바이러스 확산)
+def bfs(N):
+    visited = [[0] * N for _ in range(N)]
+    queue = []
+    sec = 0                              # 바이러스 확산까지 몇 초 걸리는지 
+    for i in range(N):
+      for j in range(N):
+        if virus[i][j] == 2:
+          queue.append((i, j))
+          visited[i][j] = 1
+
+    while queue:
+        i, j = queue.pop(0)
+        if virus[i][j] == 3:
+            for k in visited:
+                if max(k)-1 > sec:
+                    sec = max(k)-1
+            return sec
+        for di, dj in [[0, 1], [1, 0], [0, -1], [-1, 0]]:
+            ni, nj = i+di, j+dj
+            if 0 <= ni < N and 0 <= nj < N and virus[ni][nj] != 1 and visited[ni][nj] == 0:
+                queue.append((ni, nj))
+                visited[ni][nj] = visited[i][j] + 1
+    return -1
+
+T = int(input())
+for tc in range(1, T+1):
+    N = int(input())
+    virus = [list(map(int, input())) for _ in range(N)]
+    print(f'#{tc} {bfs(N)}')
 ```
 
 <br/>
 
 ## ✨ DFS vs BFS
 
-- A에서 B로 가는 경로가 있는가?
-    : `DFS`, `BFS`
+- A에서 B로 가는 경로가 있는가? ➡️  `DFS`, `BFS`
 
-- A에서 B로 가는 경로의 개수는?
-    : `DFS`
-- A에서 B로 가는 최단 경로의 길이는?
-    : 주로 `BFS` 사용 (`DFS`도 가능)
+- A에서 B로 가는 경로의 개수는? ➡️ `DFS`
+
+- A에서 B로 가는 최단 경로의 길이는? ➡️ 주로 `BFS` (`DFS`도 가능은 함.)
+
+    - 최단경로 `DFS`
+
+        - 모든 경로를 돌아봐야 한다는 단점이 존재
+
+        ```python
+        # ex) SWEA 4875 미로
+        def dfs(i, j, s, N):
+          global possible_route_cnt
+          global shortest_distance
+          if maze[i][j] == 3:
+            possible_route_cnt += 1       # 가능한 경로의 수 cnt
+            if shortest_distance > s+1:   # 출발, 도착 포함하므로 s에 +1
+              shortest_distance = s+1
+            return
+          else:
+            visited[i][j] = 1
+            for di, dj in [[0, 1], [1, 0], [0, -1], [-1, 0]]:
+              ni, nj = i+di, j+dj
+              if 0<=ni<N and 0<=nj<n and maze[ni][nj] != 1 and visited[ni][nj] == 0:
+                dfs(ni, nj, s+1, N)
+            visited[i][j] = 0             # return 하기 전에 방문기록 지우기
+            return
+            
+        N = int(input())
+        maze = [list(map(int, input())) for _ in range(N)]
+        
+        sti = -1
+        for i in range(N):
+          for j in range(N):
+            if maze[i][j] == 2:
+              sti, stj = i, j
+              break
+          if sti != -1:
+            break
+        
+        possible_route_cnt = 0
+        shortest_distance = N*N
+        visited = [[0]*N for _ in range(N)]
+        
+        dfs(sti, stj, 0, N)
+        
+        if shortest_distance = N*N:       # 최단경로가 초기에 설정한 그대로라면
+          shortest_distance = -1          # 갈 수 있는 경로가 없다는 것이므로 -1
+        
+        print(possible_route_cnt)
+        print(shortest_distance)
+        ```
