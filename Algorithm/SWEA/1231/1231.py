@@ -11,7 +11,7 @@ for tc in range(1, 11):
     N = int(input())
     c1 = [0] * (N+1)
     c2 = [0] * (N+1)
-    key = ['z'] * (N+1)
+    key = ['t'] * (N+1)
     
     for _ in range(N):
         arr = list(input().split())
