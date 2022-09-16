@@ -227,7 +227,7 @@
     # 루트 찾는 함수
     def find_root(V):
         for i in range(1, V+1):
-            if par[1] == 0:                             # 부모가 없으면 root
+            if par[i] == 0:                             # 부모가 없으면 root
                 return i
     ```
 
