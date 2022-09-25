@@ -219,8 +219,8 @@
     
     # 5번 노드의 조상 찾기
     c = 5
-    while a[c] != 0:
-        c = a[c]
+    while par[c] != 0:
+        c = par[c]
         anc.append(c)                                   # 조상 목록
     root = c
     
