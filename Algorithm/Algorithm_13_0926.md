@@ -26,8 +26,8 @@
         for x in li[middle:]:
             right.append(x)
             
-        merge_sort(left)
-        merge_sort(right)
+        left = merge_sort(left)
+        right = merge_sort(right)
         
         return merge(left, right)                           # 병합 과정
     ```
@@ -43,7 +43,7 @@
                 if left[0] <= right[0]:
                     result.append(left.pop(0))
                 else:
-                    result.append(rigjt.pop(0))
+                    result.append(right.pop(0))
             elif len(left) > 0:
                 result.append(left.pop(0))
             elif len(right) > 0:
