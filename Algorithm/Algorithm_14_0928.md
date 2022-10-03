@@ -74,7 +74,7 @@
     3. 모든 정점이 선택될 때까지 1, 2를 반복
 - 서로소인 2개인 집합(2 disjoint-sets) 정보를 유지
     - 트리 정점들 (tree vertices) : MST를 만들기 위해 선택된 정점들
-    - 비트리 정점들 (nontree vertices) - 선택되지 않은 정점들
+    - 비트리 정점들 (nontree vertices) : 선택되지 않은 정점들
 
 ```python
 '''
@@ -187,7 +187,7 @@ print(total)
     - 다익스트라(dijkstra) 알고리즘 : 음의 가중치 허용 X
     - 벨만-포드(Bellman-Ford) 알고리즘 : 음의 가중치 허용
 - 모든 정점들에 대한 최단 경로
-    - 플로이드-워샬(Floyd-Warshall ) 알고리즘
+    - 플로이드-워샬(Floyd-Warshall) 알고리즘
 
 <br/>
 
