@@ -1,6 +1,4 @@
-import heapq
-import sys
-sys.stdin = open('sample_input (25).txt')
+import heapqs
 
 def dijkstra():
     heap = []
