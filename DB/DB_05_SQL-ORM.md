@@ -25,10 +25,10 @@
 
     ```sql
     # SQL
-    SELECT first_name, age, balance FROM uesrs ORDER BY age ASC, balance DESC;
+    SELECT first_name, age, balance FROM users ORDER BY age ASC, balance DESC;
     
     # ORM
-    User.objects.order_by('age', '-balance')
+    User.objects.order_by('age', '-balance').values('first_name', 'age', 'balance')
     ```
 
 - 중복 없이 모든 지역 조회
@@ -175,7 +175,7 @@
 
     
 
-## DDL vs DML
+## (SQL) DDL-DML
 
 - **DDL** (Data Definituon Language)
 
@@ -186,7 +186,7 @@
     - `CREATE`
 
         ```sql
-        CREATE TABLE table_names (
+        CREATE TABLE table_name (
           -- column_name data_type constraints
           name TEXT NOT NULL,
           age INTEGER NOT NULL,
@@ -245,7 +245,7 @@
 
         ```sql
         -- ORDER BY (sorting rows)
-        SELECT fisrt_name, age, blance FROM users ORDER BY age ASC, balance DESC;
+        SELECT fisrt_name, age, balnce FROM users ORDER BY age ASC, balance DESC;
         
         -- DISTINNCT (filtering data)
         SELECT DISTINCT country FROM users;
