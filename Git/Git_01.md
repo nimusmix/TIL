@@ -20,11 +20,11 @@
   *  `../` : 상위 폴더
 
   ``` bash
-  C://users/SSAFY/sky/a.txt    # a 기준으로
+  C://users/SSAFY/sky/a.txt        # a 기준으로
   
   C://users/SSAFY/sky/b.txt		 # b의 위치는 ./b.txt
   
-  C://users/SSAFY/c.txt				 # c의 위치는 ../c.txt
+  C://users/SSAFY/c.txt            # c의 위치는 ../c.txt
   
   C://users/SSAFY/kbk/k.txt		 # k의 위치는 ../kbk/t.txt
   ```
@@ -64,15 +64,15 @@
 * `cd` : *change directory.* 폴더를 이동하는 명령어
 
   ```bash
-  cd ..		                   	# 상위 폴더로 이동
-  cd test 	                  # test 폴더로 이동
+  cd .                              # 상위 폴더로 이동
+  cd test                           # test 폴더로 이동
   ```
 
 * `mv` : *move.*
 
   ```bash
-  mv a.txt b.txt			        # a.txt를 b.txt로 rename (a.txt와 b.txt가 같은 폴더에 있으므로)
-  mv a.txt ../test		        # a.txt를 상위 폴더의 test 폴더로 이동
+  mv a.txt b.txt                    # a.txt를 b.txt로 rename (a.txt와 b.txt가 같은 폴더에 있으므로)
+  mv a.txt ../test                  # a.txt를 상위 폴더의 test 폴더로 이동
   ```
 
 * `rm` : *remove.* 복구 안 됨.
@@ -91,7 +91,7 @@
 * `git init` : `Working Directory`에 프로젝트 생성하는 기능
 
   ```bash
-  git init		               	# untracked file 상태
+  git init                          # untracked file 상태
   ```
 
 * `git config` : 사용자 설정
@@ -111,7 +111,7 @@
 * `git commit` : `Repository`에 version 확정하여 업로드하는 기능
 
   ```bash
-  git commit -m "1st commit"	#'1st commit'이라는 메시지와 함께 커밋
+  git commit -m "1st commit"        # '1st commit'이라는 메시지와 함께 커밋
   ```
 
 * `git status` : 현재 git의 상태를 보여주는 명령어
@@ -121,13 +121,13 @@
   $ git status
   On branch master
   
-  No commits yet							# Repository에 있는 파일
+  No commits yet                    # Repository에 있는 파일
   
-  Changes to be committed:		# Staging Area에 있는 파일
+  Changes to be committed:          # Staging Area에 있는 파일
     (use "git rm --cached <file>..." to unstage)
           new file:   ny_pjt.txt
   
-  Untracked files:						# Working Area에 있는 파일
+  Untracked files:                  # Working Area에 있는 파일
     (use "git add <file>..." to include in what will be committed)
           a.txt
           b.txt
@@ -144,7 +144,7 @@
   
       1st commit
   
-  git log --oneline			    	# 커밋 기록을 한 줄로 보여줌.
+  git log --oneline                 # 커밋 기록을 한 줄로 보여줌.
   # 결과
   498021a (HEAD -> master) 1st commit
   ```
@@ -173,7 +173,7 @@
 
   ```bash
   git remote add origin https://github.com/your_name/folder_name.git
-  git remote -v				        # remote 결과 확인
+  git remote -v                    # remote 결과 확인
   git push -u origin master
   ```
 
