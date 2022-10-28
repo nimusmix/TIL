@@ -22,11 +22,11 @@
   ``` bash
   C://users/SSAFY/sky/a.txt        # a 기준으로
   
-  C://users/SSAFY/sky/b.txt		 # b의 위치는 ./b.txt
+  C://users/SSAFY/sky/b.txt        # b의 위치는 ./b.txt
   
   C://users/SSAFY/c.txt            # c의 위치는 ../c.txt
   
-  C://users/SSAFY/kbk/k.txt		 # k의 위치는 ../kbk/t.txt
+  C://users/SSAFY/kbk/k.txt        # k의 위치는 ../kbk/t.txt
   ```
 
 <br/>
@@ -42,7 +42,7 @@
 * `start` : 폴더를 열어주는 명령어
 
   ```bash
-  start .			                 # 현재 폴더를 엶.
+  start .                           # 현재 폴더를 엶.
   ```
 
 * `mkdir` : *make directory.* 새 폴더를 만드는 명령어
@@ -55,8 +55,8 @@
 * `ls` : *list.* 현재 폴더의 리스트를 보여주는 명령어
 
   ```bash
-  ls -a			                   # 숨겨놓은 파일까지 다 보여줌.
-  ls -l			                   # 모든 파일의 정보를 자세히 보여줌.
+  ls -a                             # 숨겨놓은 파일까지 다 보여줌.
+  ls -l                             # 모든 파일의 정보를 자세히 보여줌.
   ```
 
 * `pwd` : *print working directory.*  현재 위치를 알려주는 명령어
