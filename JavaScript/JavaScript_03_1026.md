@@ -349,7 +349,7 @@ axios({
   {% block script %}
     <script>
       const form = document.querySelector('#follow-form')
-      const csrftoken = doqument.querySelector('[name=csrfmiddlewaretoken]').value
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
   {% endblock script %}
   ```
 
@@ -360,7 +360,7 @@ axios({
   {% block script %}
     <script>
       const form = document.querySelector('#follow-form')
-      const csrftoken = doqument.querySelector('[name=csrfmiddlewaretoken]').value
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
       form.addEventListener('submit', function (event) {
         event.preventDefault()
         const userId = event.target.dataset.userId
@@ -408,7 +408,7 @@ axios({
   {% block script %}
     <script>
       const form = document.querySelector('#follow-form')
-      const csrftoken = doqument.querySelector('[name=csrfmiddlewaretoken]').value
+      const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
       form.addEventListener('submit', function (event) {
         event.preventDefault()
         const userId = event.target.dataset.userId
