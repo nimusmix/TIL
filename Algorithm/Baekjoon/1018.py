@@ -30,5 +30,5 @@ cnt = 2500
 for i in range(0, N-7):
     for j in range(0, M-7):
         check(i, j)
-        
+
 print(cnt)
