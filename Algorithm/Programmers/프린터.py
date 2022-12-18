@@ -1,17 +1,17 @@
+from collections import deque
+
 def solution(priorities, location):
-    answer = []
+    ans = 0
+    target = (location, priorities[location])
+    queue = deque([(idx, i) for idx, i in enumerate(priorities)])
     
-    max_v = max(priorities)
-    while priorities:
+    while queue:
+        max_v = max(queue, key=lambda x:x[1])
         
-        i = priorities.pop(0)
-        if i == max_v:
-            answer.append()
+        idx, i = queue.popleft()
+        if (idx, i) == max_v:
+            ans += 1
+            if (idx, i) == target:
+                return ans
         else:
-            priorities.append(i)
-        
-    
-    return answer
-            
-# print(solution([2, 1, 3, 2], 2))
-print(solution([1, 1, 9, 1, 1, 1], 0))
+            queue.append((idx, i))
