@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const Btn = ({ txt, onClick, fontSize = 16 }) => {
+      return (
+        <button
+          onClick={onClick}
+          style={{
+            backgroundColor: "gray",
+            color: "white",
+            padding: "10px 15px",
+            border: 0,
+            borderRadius: 10,
+            fontSize,
+          }}
+        >{txt}
+        </button>
+      )
+    }
+    // props가 변경되었을 때만 re-render하도록 함.
+    const MemorizedBtn = React.memo(Btn)
+
+    // 상속 타입 설정
+    MemorizedBtn.propTypes = {
+      txt: PropTypes.string.isRequired,
+      fontSize: PropTypes.number
+    }
+
+    const App = () => {
+      const [value, setValue] = React.useState("Save changes")
+      const changeValue = () => setValue("Revert changes")
+
+      return (  
+        <div>
+          <MemorizedBtn txt={value} onClick={changeValue}/>
+          <MemorizedBtn txt="Continue" fontSize={20}/>
+        </div>
+      )
+    }
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App/>, root);
+  </script>
+</body>
+</html>
