@@ -25,5 +25,3 @@ npm i gh-pages
   "homepage": "https://nimusmix.github.io/TIL"       // 코드가 있는 repo
 }
 ```
-
-<br/>
