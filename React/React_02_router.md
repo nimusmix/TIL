@@ -70,4 +70,3 @@ export default Detail;
 
 - `useParams()`
     - 동적 url의 파라미터를 얻을 수 있음.
-
