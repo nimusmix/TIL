@@ -220,3 +220,56 @@ function App() {
   )
 }
 ```
+
+<br/>
+
+## ✨ Theme
+
+```javascript
+// index.js
+...
+import { ThemeProvider } from 'styled-components'
+import App from './App'
+
+const darkTheme = {
+  textColor: "whitesmoke",
+  backgroundColor: "#111",
+}
+
+const lightTheme = {
+  textColor: "#111",
+  backgroundColor: "whitesmoke"
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ThemeProvider theme={darkTheme}>
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>
+)
+```
+
+```react
+// App.js
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${(props) => props.theme.backgroundColor}
+`
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor}
+`
+
+function App() {
+  return (
+    <Wrapper>
+      <Title>Hello</Title>
+    </Wrapper>
+  )
+}
+```
+
