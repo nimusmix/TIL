@@ -1,8 +1,11 @@
 import ApexCharts from 'react-apexcharts';
 import { useQuery } from 'react-query';
+import { useRecoilValue } from 'recoil';
 import { axiosCoinHistory } from '../api';
+import { isDarkAtom } from '../atoms';
 
 function Chart({ coinId }: IChart) {
+  const isDark = useRecoilValue(isDarkAtom);
   const { isLoading, data } = useQuery<IData[]>(['ohlcv', coinId], () => axiosCoinHistory(coinId));
   return (
     <>
@@ -19,7 +22,7 @@ function Chart({ coinId }: IChart) {
           ]}
           options={{
             theme: {
-              mode: 'dark',
+              mode: isDark ? 'dark' : 'light',
             },
             chart: {
               width: 440,

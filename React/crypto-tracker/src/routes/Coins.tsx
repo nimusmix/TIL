@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { axiosCoins } from '../api';
 import { Helmet } from 'react-helmet';
+import { useSetRecoilState } from 'recoil';
+import { isDarkAtom } from '../atoms';
 
 function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>('allCoins', axiosCoins);
+  const setDarkAtom = useSetRecoilState(isDarkAtom);
+  const toggleDarkAtom = () => setDarkAtom((prev) => !prev);
 
   return (
     <Container>
@@ -14,6 +18,7 @@ function Coins() {
       </Helmet>
       <Header>
         <Title>Coins</Title>
+        <button onClick={toggleDarkAtom}>mode</button>
       </Header>
       {isLoading ? (
         <Loader>Loading ...</Loader>
