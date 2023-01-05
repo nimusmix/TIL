@@ -5,11 +5,12 @@ import { axiosCoins } from '../api';
 import { Helmet } from 'react-helmet';
 import { useSetRecoilState } from 'recoil';
 import { isDarkAtom } from '../atoms';
+import Btn from '../components/buttons';
 
 function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>('allCoins', axiosCoins);
   const setDarkAtom = useSetRecoilState(isDarkAtom);
-  const toggleDarkAtom = () => setDarkAtom((prev) => !prev);
+  const toggleDarkAtom = () => setDarkAtom((prev: boolean) => !prev);
 
   return (
     <Container>
@@ -17,8 +18,8 @@ function Coins() {
         <title>Coins</title>
       </Helmet>
       <Header>
+        <Btn txt="mode" onClick={toggleDarkAtom}></Btn>
         <Title>Coins</Title>
-        <button onClick={toggleDarkAtom}>mode</button>
       </Header>
       {isLoading ? (
         <Loader>Loading ...</Loader>
@@ -49,15 +50,16 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 const Header = styled.header`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
   height: 15vh;
 `;
 const CoinsList = styled.ul``;
 const Coin = styled.li`
   color: ${(props) => props.theme.bgColor};
-  background-color: white;
+  background-color: ${(props) => props.theme.textColor};
   border-radius: 15px;
   padding: 20px;
   margin-bottom: 10px;

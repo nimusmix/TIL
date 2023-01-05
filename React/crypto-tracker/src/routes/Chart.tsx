@@ -65,8 +65,6 @@ function Chart({ coinId }: IChart) {
   );
 }
 
-export default Chart;
-
 interface IChart {
   coinId: string;
 }
@@ -80,3 +78,5 @@ interface IData {
   volume: string;
   market_cap: number;
 }
+
+export default Chart;

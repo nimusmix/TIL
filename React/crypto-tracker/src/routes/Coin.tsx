@@ -5,6 +5,7 @@ import Chart from './Chart';
 import { useQuery } from 'react-query';
 import { axiosCoinInfo, axiosCoinPrice } from '../api';
 import { Helmet } from 'react-helmet';
+import Btn from '../components/buttons';
 
 function Coin() {
   const { coinId } = useParams<RouteParams>();
@@ -23,6 +24,9 @@ function Coin() {
         <title>{state?.name ? state.name : loading ? 'Loading...' : info?.name}</title>
       </Helmet>
       <Header>
+        <Link to="/">
+          <Btn txt="Home" />
+        </Link>
         <Title>{state?.name ? state.name : loading ? 'Loading...' : info?.name}</Title>
       </Header>
       {loading ? (
@@ -69,7 +73,7 @@ function Coin() {
               <Chart coinId={coinId} />
             </Route>
             <Route path={'/:coinId/price'}>
-              <Price />
+              <Price coinId={coinId} />
             </Route>
           </Switch>
         </>
@@ -84,8 +88,9 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 const Header = styled.header`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
   height: 15vh;
 `;
