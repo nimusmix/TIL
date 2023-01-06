@@ -949,7 +949,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
 `,aM=Yt.div`
   text-align: center;
-`;function sM(){return De(A2,{children:Ot(Qb,{children:[De(bl,{exact:!0,path:"/",children:De(OO,{})}),De(bl,{path:"/:coinId",children:De(JO,{})})]})})}var dd={},oM={get exports(){return dd},set exports(e){dd=e}};oM.exports={ReactQueryDevtools:function(){return null},ReactQueryDevtoolsPanel:function(){return null}};const lM={textColor:"whitesmoke",bgColor:"#2d3436",accentColor:"#6c5ce7"},cM={textColor:"#2d3436",bgColor:"whitesmoke",accentColor:"#6c5ce7"},uM=Fb`
+`;function sM(){return De(A2,{basename:{}.PUBLIC_URL,children:Ot(Qb,{children:[De(bl,{exact:!0,path:"/",children:De(OO,{})}),De(bl,{path:"/:coinId",children:De(JO,{})})]})})}var dd={},oM={get exports(){return dd},set exports(e){dd=e}};oM.exports={ReactQueryDevtools:function(){return null},ReactQueryDevtoolsPanel:function(){return null}};const lM={textColor:"whitesmoke",bgColor:"#2d3436",accentColor:"#6c5ce7"},cM={textColor:"#2d3436",bgColor:"whitesmoke",accentColor:"#6c5ce7"},uM=Fb`
   * {
     box-sizing: border-box;
   }
